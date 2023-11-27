@@ -1,8 +1,27 @@
 # 선언형 UI란 무엇인가?
 
-<div>공부하기 전의 내 생각</div>
+# 명령형UI가 아닌 선언형UI 프로그래밍이 바로 JetpackCompose의 장점이다.
 
-<div></div>
+<div>아래의 코드는 안드로이드 스튜디오에서 프로젝트를 생성하면 자동으로 주어지는 activity_main.xml파일이다.</div>
+<div>큰 의미는 없으며, 단지 메인화면의 UI를 나타낸 것이다.</div>
 
-기존의 안드로이드 개발에서는 LayoutResource파일에 개발자가 직접 .xml을 입력하여 UI를 구성해야 했다.(ex. RecyclerView, LinearLayout...등등)
-<div>그러나, 선언형 UI를 사용하면 UI를 코드로 작성할 수 있다. </div>
+~~~xml
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+~~~
